@@ -21,6 +21,5 @@ fetch("https://pokecord.exchange/identify-check",
 .then(res => res.replace("<div class='typewriter'>", "").replace("</div>", ""))
 .then(res => `p!catch ${res}`)
 .then(res =>  { 
-    require('child_process').spawn('clip').stdin.end(util.inspect(res))
-    console.log(res);
+    require('child_process').spawn('clip').stdin.end(res)
 });
