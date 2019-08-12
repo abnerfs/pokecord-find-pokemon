@@ -11,3 +11,8 @@ node-key-sender@^1.0.11:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/node-key-sender/-/node-key-sender-1.0.11.tgz#93210f07163607d8daf2874f1a29567d0acdb94c"
   integrity sha512-vv2IXd8QdZBFYXaIy02uy2rK6EKj+tOTEuoTxJKS9l8zw8Cz6DeLffR8ompj7N2A3h6XK7aiy+YAcTaeOqwp2Q==
+
+node-process-windows@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/node-process-windows/-/node-process-windows-0.0.2.tgz#de5152d39eca983979cb3c3966fcff656f266bc6"
+  integrity sha1-3lFS057KmDl5yzw5Zvz/ZW8ma8Y=

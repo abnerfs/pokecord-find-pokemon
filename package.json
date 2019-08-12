@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "node-fetch": "^2.6.0",
-    "node-key-sender": "^1.0.11"
+    "node-key-sender": "^1.0.11",
+    "node-process-windows": "^0.0.2"
   },
   "name": "pokecord-find-pokemon",
   "version": "1.0.0",
