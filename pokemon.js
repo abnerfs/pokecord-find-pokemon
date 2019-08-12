@@ -6,7 +6,8 @@ if(process.argv.length < 3) {
 const urlPokemon = process.argv[2];
 
 const fetch = require('node-fetch');
-const util = require('util');
+const ks = require('node-key-sender');
+
 
 
 fetch("https://pokecord.exchange/identify-check", 
@@ -22,4 +23,6 @@ fetch("https://pokecord.exchange/identify-check",
 .then(res => `p!catch ${res}`)
 .then(res =>  { 
     require('child_process').spawn('clip').stdin.end(res)
+    ks.sendCombination(['control', 'v', 'enter']);
+    ks.sendCombination(['enter']);
 });
