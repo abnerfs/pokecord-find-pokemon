@@ -8,6 +8,8 @@ const urlPokemon = process.argv[2];
 const fetch = require('node-fetch');
 const ks = require('node-key-sender');
 const processWindows = require("node-process-windows");
+processWindows.focusWindow("discord");
+processWindows.focusWindow("chrome");
 
 
 fetch("https://pokecord.exchange/identify-check", 
@@ -22,12 +24,9 @@ fetch("https://pokecord.exchange/identify-check",
 .then(res => res.replace("<div class='typewriter'>", "").replace("</div>", ""))
 .then(res => `p!catch ${res}`)
 .then(res =>  { 
-    processWindows.focusWindow("discord");
+    require('child_process').spawn('clip').stdin.end(res)
+    ks.sendCombination(['control', 'v']);
     setTimeout(() => {
-        require('child_process').spawn('clip').stdin.end(res)
-        ks.sendCombination(['control', 'v', 'enter']);
-        setTimeout(() => {
-            ks.sendCombination(['enter']);
-        }, 10);
-    }, 200)
+        ks.sendKey('enter');
+    }, 100);
 });
